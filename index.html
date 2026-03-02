@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecoform | Eco-Friendly Paper Cups</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Grain overlay -->
+    <div class="grain"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#" class="logo">
+                <img src="file.enc.jpeg" alt="ecoform" class="logo-img">
+            </a>
+            <div class="nav-links">
+                <a href="#products">Products</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#about">About</a>
+                <a href="#contact" class="nav-cta">Get Quote</a>
+            </div>
+            <button class="mobile-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-tag">Sustainable by Design</span>
+                <h1>Cups that care for<br><em>tomorrow</em></h1>
+                <p>Premium eco-friendly paper cups crafted for businesses that value sustainability without compromising quality.</p>
+                <div class="hero-actions">
+                    <a href="#products" class="btn btn-primary">Explore Products</a>
+                    <a href="#contact" class="btn btn-secondary">Request Sample</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label">Recyclable</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">3</span>
+                        <span class="stat-label">Cup Sizes</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">500+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-3d">
+                <canvas id="cup-canvas"></canvas>
+                <div class="hero-3d-label">
+                    <span>Drag to rotate</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Collection</span>
+                <h2>Choose Your<br><em>Perfect Size</em></h2>
+                <p>From espresso shots to large lattes, we have the right cup for every drink.</p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card" data-size="4oz">
+                    <div class="product-visual">
+                        <div class="cup-illustration cup-small">
+                            <div class="cup-body"></div>
+                            <div class="cup-rim"></div>
+                            <div class="cup-sleeve"></div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-size">4 OZ</span>
+                        <h3>Espresso Cup</h3>
+                        <p>Perfect for espresso, macchiato, and small tastings</p>
+                        <ul class="product-features">
+                            <li>Single layer (White)</li>
+                            <li>Double layer (Kraft/White)</li>
+                            <li>Custom logo printing</li>
+                        </ul>
+                        <span class="product-price">From <strong>0.08₾</strong>/cup</span>
+                    </div>
+                </div>
+
+                <div class="product-card featured" data-size="8oz">
+                    <div class="product-badge">Most Popular</div>
+                    <div class="product-visual">
+                        <div class="cup-illustration cup-medium">
+                            <div class="cup-body"></div>
+                            <div class="cup-rim"></div>
+                            <div class="cup-sleeve"></div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-size">8 OZ</span>
+                        <h3>Classic Cup</h3>
+                        <p>The standard choice for cappuccinos and flat whites</p>
+                        <ul class="product-features">
+                            <li>Single layer (White)</li>
+                            <li>Double layer (Kraft/White)</li>
+                            <li>Custom logo printing</li>
+                            <li>Matching lids available</li>
+                        </ul>
+                        <span class="product-price">From <strong>0.10₾</strong>/cup</span>
+                    </div>
+                </div>
+
+                <div class="product-card" data-size="12oz">
+                    <div class="product-visual">
+                        <div class="cup-illustration cup-large">
+                            <div class="cup-body"></div>
+                            <div class="cup-rim"></div>
+                            <div class="cup-sleeve"></div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-size">12 OZ</span>
+                        <h3>Grande Cup</h3>
+                        <p>Ideal for lattes, americanos, and iced drinks</p>
+                        <ul class="product-features">
+                            <li>Single layer (White)</li>
+                            <li>Double layer (Kraft/White)</li>
+                            <li>Custom logo printing</li>
+                            <li>Matching lids available</li>
+                        </ul>
+                        <span class="product-price">From <strong>0.18₾</strong>/cup</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-options">
+                <h3>Cup Variants</h3>
+                <div class="options-grid">
+                    <div class="option-card">
+                        <div class="option-swatch white"></div>
+                        <span>Single Layer</span>
+                        <small>White</small>
+                    </div>
+                    <div class="option-card">
+                        <div class="option-swatch kraft"></div>
+                        <span>Double Layer</span>
+                        <small>Kraft</small>
+                    </div>
+                    <div class="option-card">
+                        <div class="option-swatch white-kraft"></div>
+                        <span>Double Layer</span>
+                        <small>White/Kraft</small>
+                    </div>
+                    <div class="option-card">
+                        <div class="option-swatch custom"></div>
+                        <span>Custom Print</span>
+                        <small>Your Logo</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-tag">Transparent Pricing</span>
+                <h2>Better prices for<br><em>bigger orders</em></h2>
+                <p>Volume discounts that grow with your business. All prices include VAT.</p>
+            </div>
+
+            <div class="pricing-tabs">
+                <button class="pricing-tab active" data-tab="8oz">8 OZ</button>
+                <button class="pricing-tab" data-tab="4oz">4 OZ</button>
+                <button class="pricing-tab" data-tab="12oz">12 OZ</button>
+            </div>
+
+            <div class="pricing-table-wrapper">
+                <table class="pricing-table" id="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Quantity</th>
+                            <th>Single (White)</th>
+                            <th>Double (White)</th>
+                            <th>Double (Kraft)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Filled by JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pricing-note">
+                <div class="note-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 16v-4M12 8h.01"/>
+                    </svg>
+                </div>
+                <div class="note-content">
+                    <strong>Need more?</strong>
+                    <p>Orders over 10,000 cups qualify for custom pricing. Contact us for a personalized quote.</p>
+                </div>
+            </div>
+
+            <div class="accessories">
+                <h3>Accessories</h3>
+                <div class="accessories-grid">
+                    <div class="accessory-card">
+                        <div class="accessory-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <ellipse cx="12" cy="6" rx="8" ry="3"/>
+                                <path d="M4 6v2c0 1.66 3.58 3 8 3s8-1.34 8-3V6"/>
+                            </svg>
+                        </div>
+                        <span class="accessory-name">8oz Lid</span>
+                        <span class="accessory-price">0.07₾</span>
+                    </div>
+                    <div class="accessory-card">
+                        <div class="accessory-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <ellipse cx="12" cy="6" rx="8" ry="3"/>
+                                <path d="M4 6v2c0 1.66 3.58 3 8 3s8-1.34 8-3V6"/>
+                            </svg>
+                        </div>
+                        <span class="accessory-name">12oz Lid</span>
+                        <span class="accessory-price">0.08₾</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-tag">Our Story</span>
+                    <h2>Crafted with<br><em>purpose</em></h2>
+                    <p class="about-lead">At ecoform, we believe that everyday choices can make an extraordinary difference. Every cup we create is a step toward a more sustainable future.</p>
+                    <p>Our cups are made from responsibly sourced paper, designed to decompose naturally while providing the premium feel your customers deserve. We partner with cafes, restaurants, and businesses across Georgia who share our vision for a greener tomorrow.</p>
+
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 3c-1.5 0-2.5 1-2.5 2.5 0 1 .5 1.5 1 2-.5.5-1.5 1-1.5 2.5 0 1.5 1 2.5 2.5 2.5h1c1.5 0 2.5-1 2.5-2.5 0-1.5-1-2-1.5-2.5.5-.5 1-1 1-2C14.5 4 13.5 3 12 3z"/>
+                                    <path d="M12 12.5V21"/>
+                                    <path d="M8 17h8"/>
+                                </svg>
+                            </div>
+                            <h4>Eco-First</h4>
+                            <p>100% recyclable materials</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                    <path d="M2 17l10 5 10-5"/>
+                                    <path d="M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <h4>Premium Quality</h4>
+                            <p>Double-wall insulation</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <h4>Local Support</h4>
+                            <p>Georgian business, local service</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="about-image-stack">
+                        <div class="stack-item stack-1">
+                            <div class="floating-cup fc-1"></div>
+                        </div>
+                        <div class="stack-item stack-2">
+                            <div class="floating-cup fc-2"></div>
+                        </div>
+                        <div class="stack-item stack-3">
+                            <div class="floating-cup fc-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">Get in Touch</span>
+                    <h2>Let's brew<br><em>something great</em></h2>
+                    <p>Ready to make the switch to sustainable cups? We'd love to hear from you. Get a custom quote or request free samples.</p>
+
+                    <div class="contact-methods">
+                        <a href="tel:+995555123456" class="contact-method">
+                            <div class="method-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <div class="method-text">
+                                <span>Call us</span>
+                                <strong>+995 555 123 456</strong>
+                            </div>
+                        </a>
+                        <a href="mailto:info@ecoform.ge" class="contact-method">
+                            <div class="method-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="method-text">
+                                <span>Email us</span>
+                                <strong>info@ecoform.ge</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Estimated Monthly Quantity</label>
+                        <select id="quantity" name="quantity">
+                            <option value="">Select quantity</option>
+                            <option value="500-1000">500 - 1,000 cups</option>
+                            <option value="1000-3000">1,000 - 3,000 cups</option>
+                            <option value="3000-10000">3,000 - 10,000 cups</option>
+                            <option value="10000+">10,000+ cups</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your needs..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Send Message</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12 5 19 12 12 19"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="file.enc.jpeg" alt="ecoform" class="footer-logo">
+                    <p>Sustainable paper cups for a better tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Products</h4>
+                        <a href="#products">4oz Cups</a>
+                        <a href="#products">8oz Cups</a>
+                        <a href="#products">12oz Cups</a>
+                        <a href="#products">Accessories</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="#about">About Us</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ecoform. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
